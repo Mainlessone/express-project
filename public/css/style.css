@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(198, 216, 230);
+}
+nav {
+    background-color:rgb(31, 29, 29);
+    height: 67px;
+    border-bottom: 1px solid black;
+    width: 100%;
+  }
+
+.block1 {
+    padding-right: 20px;
+  }
+  .link-1 {
+    float: right;
+    color: white;
+    font-size: 20px;
+    width: 10%;
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+  .link-1:hover {
+    background-color:	rgb(46, 59, 70);
+  }
+  p, h1 {
+    text-align: center;
+}
+
+
