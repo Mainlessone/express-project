@@ -2,6 +2,7 @@ const express = require('express');
 let app = express();
 const bodyParser = require('body-parser');
 const emailSender = require('./nodemailer.js');
+const port = process.env.PORT || 3000;
 
 let urlEncodedParser = bodyParser.urlencoded({extended: false});
 
@@ -19,7 +20,7 @@ app.get('/aboutus', (req,res)=>{
 app.get('/contacts', (req,res)=>{
     res.render('contacts');
 });
-app.post('/contacts', urlEncodedParser, (req,res)=>{
+app.post('/contacts',(req,res)=>{
     if(!req.body) return res.sendStatus(400);
     res.render('contacts');
     emailSender.email(req.body.name, req.body.email, req.body.phone);
@@ -27,4 +28,4 @@ app.post('/contacts', urlEncodedParser, (req,res)=>{
 
 
 
-app.listen(3000);
+app.listen(port);
